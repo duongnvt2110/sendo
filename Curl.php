@@ -66,10 +66,10 @@ class mycurl {
 	{ 
 		$this->_useragent = $userAgent; 
 	} 
-     // public function setContentType($contentType)
-     // {
-     // 	$this->_contentType=$contentType;
-     // }
+     public function setContentType($contentType)
+     {
+     	$this->_contentType=$contentType;
+     }
 	public function createCurl($url = 'nul') 
 	{ 
 		if($url != 'nul'){ 
@@ -78,14 +78,16 @@ class mycurl {
 
 		$s = curl_init(); 
 
-		curl_setopt($s,CURLOPT_URL,$this->_url); 
-		curl_setopt($s, CURLOPT_HTTPHEADER, array(
-											'Content-Encoding: gzip',
-                                            'Content-Type: application/x-www-form-urlencoded',
+		curl_setopt($s,CURLOPT_URL,$this->_url);
+		curl_setopt($s, CURLOPT_HTTPHEADER, array(	
+											// 'Accept-Encoding: gzip',
+                                            $this->_contentType,
+                                            'X-Requested-With: XMLHttpRequest;',
                                             'Connection: Keep-Alive'
-                                            ));
-
-		curl_setopt($s, CURLOPT_HTTPHEADER,array("Expect:  ")); 
+                                            )); 
+		// curl_setopt($s, CURLOPT_HTTPHEADER,array("Expect:  ")); 
+		
+		
 		curl_setopt($s,CURLOPT_TIMEOUT,$this->_timeout); 
 		curl_setopt($s,CURLOPT_MAXREDIRS,$this->_maxRedirects); 
 		curl_setopt($s,CURLOPT_RETURNTRANSFER,true); 
