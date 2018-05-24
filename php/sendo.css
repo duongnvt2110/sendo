@@ -1,0 +1,23 @@
+.form-product
+{
+	padding-top: 50px;
+
+}
+
+.form-info
+{
+	position:relative;
+	display: inline-block;
+	width: 50%!important;
+}
+.button
+{
+	padding-left: 10px;
+}
+.tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.table td, .table th {
+    border: 1px solid #dddddd!important;;
+    text-align: left;
+}

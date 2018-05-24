@@ -1,0 +1,277 @@
+<form class="" role="form">
+    <div class="form-group chon-nganh-hang">
+        <label for="inputProductName" class="col-lg-2 col-md-3 col-xs-2">
+            Danh mục <span class="red-star-input">*</span>
+        </label>
+        <div class="col-lg-10 col-md-8 col-xs-9">
+            <button data-bind="attr: { 'class': ProductDetail().CanEdit() ? 'btn_choice_cate md-trigger btn btn-primary' : 'md-trigger btn btn-primary btn-xs disable' }" type="button" class="btn_choice_cate md-trigger btn btn-primary" data-original-title="Chọn ngành hàng">
+                Chọn ngành hàng
+            </button>
+
+            <!-- longnq edit show cate -->
+
+            <div class="choice_cate clearfix">
+
+                <div class="modal-body">
+                    <div class="block-search">
+                        <!-- ko if:ArrBreakcrums().length>0 --><!--/ko-->
+                        <div class="box-search">
+                            <div class="input-group">
+                                <input type="text" class="form-control clsinputcatetext" data-bind="value: KeyCate, valueUpdate: 'input', executeOnEnter: SearchCategory" placeholder="Nhập tìm chuyên mục">
+                                <span class="input-group-addon" data-bind="click: SearchCategory"><i class="fa fa-search"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="block-catefory">
+                            <ul class="tabs-cate level-1">
+                                <!--level1-->
+                                <li class="women" data-bind="click: function () { GetcateChild(8, 2); }">
+                                    <span>Thời trang nữ</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="men" data-bind="click: function () { GetcateChild(94, 2); }">
+                                    <span>Thời trang nam</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="men" data-bind="click: function () { GetcateChild(1924, 2); }">
+                                    <span>Máy ảnh – máy quay phim</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="men" data-bind="click: function () { GetcateChild(1962, 2); }">
+                                    <span>Thiết bị y tế</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+
+                                <li class="mombaby" data-bind="click: function () { GetcateChild(2229, 2); }">
+                                    <span>Sách &amp; Văn phòng phẩm</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="mombaby" data-bind="click: function () { GetcateChild(2120, 2); }">
+                                    <span>Ô tô – Xe máy</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="mombaby" data-bind="click: function () { GetcateChild(2071, 2); }">
+                                    <span>Tivi – Thiết bị giải trí</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="mombaby" data-bind="click: function () { GetcateChild(2045, 2); }">
+                                    <span>Điện máy</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="mombaby" data-bind="click: function () { GetcateChild(2358, 2); }">
+                                    <span>Thực Phẩm Tươi Sống</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+
+                                <li class="mombaby" data-bind="click: function () { GetcateChild(138, 2); }">
+                                    <span>Mẹ và bé</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="houseware" data-bind="click: function () { GetcateChild(999, 2); }">
+                                    <span>Nhà cửa</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="food" data-bind="click: function () { GetcateChild(1146, 2); }">
+                                    <span>Bách Hoá Tổng Hợp</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="cosmetic" data-bind="click: function () { GetcateChild(220, 2); }">
+                                    <span>Sức khỏe &amp; làm đẹp</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="hightech" data-bind="click: function () { GetcateChild(528, 2); }">
+                                    <span>Phụ kiện công nghệ</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="sport" data-bind="click: function () { GetcateChild(1633, 2); }">
+                                    <span>Điện thoại - máy tính bảng</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+
+                                <li class="sport" data-bind="click: function () { GetcateChild(2850, 2); }">
+                                    <span>Laptop, Máy tính &amp; Thiết bị văn phòng</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+
+                                <li class="elec" data-bind="click: function () { GetcateChild(1085, 2); }">
+                                    <span>Đồ điện gia dụng</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="house" data-bind="click: function () { GetcateChild(604, 2); }">
+                                    <span>Đời sống</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="sport" data-bind="click: function () { GetcateChild(727, 2); }">
+                                    <span>Thể thao &amp; giải trí</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+
+                                <li class="sport" data-bind="click: function () { GetcateChild(1333, 2); }">
+                                    <span>Đồng hồ</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="sport" data-bind="click: function () { GetcateChild(1425, 2); }">
+                                    <span>Đồ chơi</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+
+                                <li class="sport" data-bind="click: function () { GetcateChild(1656, 2); }">
+                                    <span>Giày dép </span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="sport" data-bind="click: function () { GetcateChild(1691, 2); }">
+                                    <span>Túi xách</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="sport" data-bind="click: function () { GetcateChild(1599, 2); }">
+                                    <span>Phụ kiện thời trang</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="sport" data-bind="click: function () { GetcateChild(2797 , 2); }">
+                                    <span>Tân Trang Nhà Cửa</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="sport" data-bind="click: function () { GetcateChild(2669, 2); }">
+                                    <span>Voucher Dịch Vụ</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="sport" data-bind="click: function () { GetcateChild(3178, 2); }">
+                                    <span>Thiết bị âm thanh</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                                <li class="sport" data-bind="click: function () { GetcateChild(3630, 2); }">
+                                    <span>Dịch vụ tiện ích</span>
+                                    <i class="fa fa-angle-right drop-icon"></i>
+                                </li>
+                            </ul>
+                            <!-- ko if:CateTwo().length!=undefined && CateTwo().length>0 --><!--/ko-->
+                            <!-- ko if:CateThree()!=undefined && CateThree().length>0 --><!--/ko-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- // longnq edit show cate -->
+
+            <div class="category">
+                <!-- ko if:ArrBreakcrums().length >0--><!--/ko-->
+            </div>
+        </div>
+    </div>
+    <!-- ko if:ArrBreakcrums().length > 0 && ArrBreakcrums()[0].Description() != null && ArrBreakcrums()[0].Description() != "" --><!--/ko-->
+
+    <div class="form-group">
+        <label for="inputProductName" class="col-lg-2 col-md-3 col-xs-2">Tên sản phẩm <span class="red-star-input">*</span></label>
+        <div class="col-lg-10 col-md-8 col-xs-9">
+            <input type="text" class="form-control" id="inputProductName" data-bind="value: ProductDetail().Name, enable: ProductDetail().CanEdit" data-toggle="tooltip" data-placement="top" title="" placeholder="Nhập tên sản phẩm" data-original-title="(Nhập tối đa 70 ký tự)">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputProductCode" class="col-lg-2 col-md-3 col-xs-2">Mã sản phẩm <span class="red-star-input">*</span></label>
+        <div class="col-lg-10 col-md-8 col-xs-9">
+            <input type="text" class="form-control" id="inputProductCode" data-bind="value: ProductDetail().StoreSku, enable: ProductDetail().CanEdit" data-toggle="tooltip" data-placement="top" title="" placeholder="Nhập mã sản phẩm" data-original-title="(Nhập tối đa 30 ký tự)">
+        </div>
+    </div>
+    <div class="form-group form-group-price">
+        <label for="inputProductPrice" class="col-lg-2 col-md-3 col-xs-2">Giá <span class="red-star-input">*</span></label>
+        <div class="col-lg-10 col-md-8 col-xs-9">
+            <div class="for-price col-lg-6 col-md-6 col-xs-6">
+                <input type="text" class="form-control" placeholder="Nhập giá" data-toggle="tooltip" id="inputProductPrice" title="" data-bind="moneyMask: ProductDetail().Price, enable: ProductDetail().CanEdit" data-original-title="(Trên 10.000 VNĐ)">
+            </div>
+            <div class="col-lg-2 col-md-2 col-xs-2 vnd ">VNĐ</div>
+            <div class="for-dv col-lg-3 col-md-4 col-xs-4">
+                <select class="form-control selectized" data-toggle="tooltip" data-placement="top" title="" data-original-title="(Trên 10.000 vnđ)" data-bind="selectize: ProductDetail().UnitId ,selectizeOptions: Units, optionsText: 'Value', value: ProductDetail().UnitId, optionsValue: 'Key', optionsCaption: 'Đơn vị', enable: ProductDetail().CanEdit" tabindex="-1" style="display: none;"><option value="">Đơn vị</option><option value="Single">Cái</option><option value="Set">Bộ</option><option value="One">Chiếc</option><option value="Double">Đôi</option><option value="Box">Hộp</option><option value="Book">Cuốn</option><option value="Bottle">Chai</option><option value="Crate">Thùng</option></select><div class="selectize-control form-control selectized single plugin-remove_button"><div class="selectize-input items not-full has-options"><input type="text" autocomplete="off" tabindex="-1" placeholder="Đơn vị" style="width: 42px;"></div><div class="selectize-dropdown single form-control selectized plugin-remove_button" style="display: none;"><div class="selectize-dropdown-content"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group form-group-volume">
+        <label for="inputvolume" class="col-lg-2 col-md-3 col-xs-2">Khối lượng <span class="red-star-input">*</span></label>
+        <div class="col-lg-10 col-md-8 col-xs-9 for-volume">
+            <div class="">
+                <div class="box_weight clearfix">
+                    <label for="inputdai" class="col-lg-2 col-md-3 col-xs-2">Trọng lượng</label>
+                    <div class="input_w">
+                        <input type="text" placeholder="Nhập khối lượng" class="form-control" id="inputvolume" data-bind="numberMask: ProductDetail().Weight, enable: ProductDetail().CanEdit, valueUpdate: 'afterkeydown'" data-toggle="tooltip" data-placement="top" title="" data-original-title="(Từ 10g - 100000g)">
+                    </div>
+                    <div class="col-lg-1 col-md-2 col-xs-2 gr">g</div>
+                    <div class="col-lg-2 col-md-2 col-xs-2 weight_toggle">
+                        <!--<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseWeight" aria-expanded="false" aria-controls="collapseWeight">
+                            Thu gọn
+                        </a> -->
+                        <a class="toggle_dimension" role="button" aria-expanded="false">
+                            Trọng lượng khối
+                        </a>
+
+                        
+                    </div>
+                </div>
+
+                <div class="dimention_box clearfix" id="collapseWeight">
+
+                    <!-- <div class="">
+                         <b>Khối lượng tính theo trọng lượng khối</b>
+                     </div> -->
+
+                    <div class=" form-group wh">
+                        <label for="inputdai">Chiều dài (cm)</label>
+
+                        <input type="text" class="form-control" placeholder="0" id="inputdai" title="" data-bind="numberMask: ProductDetail().LengthProduct, valueUpdate: 'afterkeydown'">
+                    </div>
+                    <div class=" form-group wh">
+                        <label for="inputrong">Chiều rộng (cm)</label>
+
+                        <input type="text" class="form-control" placeholder="0" id="inputrong" title="" data-bind="numberMask: ProductDetail().WitdhProduct, valueUpdate: 'afterkeydown'">
+                    </div>
+                    <div class=" form-group wh">
+                        <label for="inputcao" class="">Chiều cao (cm)</label>
+
+                        <input type="text" class="form-control" placeholder="0" id="inputcao" title="" data-bind="numberMask: ProductDetail().HeightProduct, valueUpdate: 'afterkeydown'">
+                    </div>
+                    <div class="note_group">
+                        <i><b>Lưu ý:</b> khi tính phí ship, mặc định hệ thống sẽ lấy từ trọng lượng có cân nặng lớn nhất. </i>
+                    </div>
+                </div>
+            </div>
+
+            <p class="col-lg-12">Lưu ý: khi tính phí ship, mặc định hệ thống sẽ lấy từ trọng lượng có cân nặng lớn nhất.</p>
+
+            <!-- <p class="col-lg-12"><i><b>Lưu ý:</b> khi tính phí ship, mặc định hệ thống sẽ lấy từ trọng lượng có cân nặng lớn nhất. </i></p> -->
+        </div>
+    </div>
+
+    <div class="form-group form-group-status">
+        <label for="" class="col-lg-2 col-md-3 col-xs-2">Tình trạng hàng <span class="red-star-input">*</span></label>
+        <div class="col-lg-10 col-md-8 col-xs-9 col-status_">
+            <div class="checkbox-nice">
+                <input type="checkbox" id="checkbox-con-hang" data-bind="checked: ProductDetail().StockAvailability, enable: ProductDetail().CanEdit">
+                <label for="checkbox-con-hang">Còn hàng</label>
+            </div>
+            <div class="checkbox-nice for-dv ">
+                <input type="checkbox" id="checkbox-tonkho" data-bind="checked: ProductDetail().IsManageStock, enable: ProductDetail().CanEdit">
+                <label for="checkbox-tonkho">Quản lý tồn kho</label>
+                <span class="tool-tip_" data-toggle="tooltip" data-placement="top" title="" data-original-title="Chức năng để quản lý số lượng hàng tồn kho của Shop"><i class="fa fa-question-circle"></i></span>
+                <input type="text" class="form-control" placeholder="Số lượng tồn" data-toggle="tooltip" title="" data-bind="numberMask: ProductDetail().StockQuantity, enable: (ProductDetail().CanEdit &amp;&amp; ProductDetail().IsManageStock)" disabled="" data-original-title="">
+            </div>
+        </div>
+    </div>
+    <div class="form-group form-group-tags">
+        <label for="inputTags" class="col-lg-2 col-md-3 col-xs-2">Từ khóa </label>
+        <div class="col-lg-10 col-md-8 col-xs-9 for-tags">
+            <div class="col-lg-8 col-md-9 col-xs-9">
+                <div id="inputTags" class="ms-ctn " style="width: 380px;"><div id="ms-trigger-0" class="ms-trigger"><div class="ms-trigger-ico"></div></div><div class="ms-helper " style="display: block;"></div><div id="ms-sel-ctn-0" class="ms-sel-ctn"><input id="ms-input-0" type="text" class="ms-empty-text" value="Type or click here" style="width: 338px;"></div></div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-3">
+                <button type="button" class="btn btn-primary btn_up_img" data-bind="visible: ProductDetail().CanEdit, click: AutoTagsClick, style: { 'display': CanAutoTag() == true ? 'block' : 'none' }" style="display: none;">Tạo từ khóa</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ko if:Brands().length >0--><!-- /ko -->
+
+    <div data-bind="foreach: ProductDetail().attributeCollections"></div>
+
+    <div class="form-group form-group-orig" data-bind="foreach: ProductDetail().attributeCollections"></div>
+</form>

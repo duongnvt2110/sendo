@@ -1,0 +1,142 @@
+POST /Gallery/UploadImageProduct ------moxieboundary1526883483254
+Content-Type: multipart/form-data; boundary=----moxieboundary1526883483254
+
+ Content-Disposition: form-data; name="name"
+ 
+ 24131322_2043617862324370_8727029391407448985_n.jpg
+ ------moxieboundary1526883483254
+ 1272509157
+ 1526883483254
+ Content-Disposition: form-data; name="chunk"
+
+ 0
+ ------moxieboundary1526883483254
+
+ ------moxieboundary1526891696552
+
+ Content-Disposition: form-data; name="chunks"
+ 
+ 1
+ ------moxieboundary1526883483254
+ Content-Disposition: form-data; name="albumid"
+ 
+ -1
+ ------moxieboundary1526883483254
+ Content-Disposition: form-data; name="file"; filename="24131322_2043617862324370_8727029391407448985_n.jpg"
+ Content-Type: image/jpeg
+ 
+ ÿØÿà
+ 
+https://ban.sendo.vn/Gallery/GetAlbums
+Content-Type: application/json; charset=utf-8
+
+
+https://ban.sendo.vn/Gallery/GetImagesByAlbumId
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+albumId=249200&pageSize=20&pageIndex=0
+
+POST /Gallery/GetImagesByAlbumId albumId=249200&pageSize=20&pageIndex=0
+
+Func _BoundaryGenerator()
+	Local $sData = ""
+	For $i = 1 To 12
+		$sData &= Random(1, 9, 1)
+	Next
+	Return ('-----------------------------' & $sData)
+EndFunc
+
+
+$sBoundary=
+$sDataToSend   = $sBoundary & <br>
+
+$sDataToSend &= $CDFAN & '"csrf_token_post"' & $xd & $Token & @CRLF
+
+$sDataToSend &= $sBoundary & @CRLF
+
+$sDataToSend &= $CDFAN & '"submit_hidden"' & $xd & 'submit_hidden' & @CRLF
+
+$sDataToSend &= $sBoundary & @CRLF
+
+$sDataToSend &= $CDFAN & '"paste_code"' & $xd & 'Nội dung mà ta đã gửi' & @CRLF
+
+$sDataToSend &= $sBoundary & @CRLF
+
+$sDataToSend &= $CDFAN & '"paste_format"' & $xd & '1' & @CRLF
+
+$sDataToSend &= $sBoundary & @CRLF
+
+$sDataToSend &= $CDFAN & '"paste_expire_date"' & $xd & 'N' & @CRLF
+
+$sDataToSend &= $sBoundary & @CRLF
+
+$sDataToSend &= $CDFAN & '"paste_private"' & $xd & '0' & @CRLF
+
+$sDataToSend &= $sBoundary & @CRLF
+
+$sDataToSend &= $CDFAN & '"paste_name"' & $xd & 'Tên đã đặt' & @CRLF ;gán biến cho tiện khi code
+
+$sDataToSend &= $sBoundary & '--' ; Luôn nhớ Boundary kết thúc với '--'​
+ 
+ 
+ POST /Gallery/UploadImageProduct
+ ------moxieboundary1526891696552
+ Content-Disposition: form-data; name="name"
+ 
+ 24775179_812457462275838_5027245078620327386_n.jpg
+ ------moxieboundary1526891696552
+ Content-Disposition: form-data; name="chunk"
+ 
+ 0
+ ------moxieboundary1526891696552
+ Content-Disposition: form-data; name="chunks"
+ 
+ 1
+ ------moxieboundary1526891696552
+ Content-Disposition: form-data; name="albumid"
+ 
+ -1
+ ------moxieboundary1526891696552
+ Content-Disposition: form-data; name="file"; filename="24775179_812457462275838_5027245078620327386_n.jpg"
+ Content-Type: image/jpeg
+ 
+ ÿØÿà
+------moxieboundary1526895091361
+Content-Disposition: form-data; name=name
+
+24775179_812457462275838_5027245078620327386_n.jpg
+------moxieboundary1526895091361
+Content-Disposition: form-data; name=chuck
+
+0
+------moxieboundary1526895091361
+Content-Disposition: form-data; name=chunks
+
+1
+------moxieboundary1526895091361
+Content-Disposition: form-data; name=albumid
+
+-1
+------moxieboundary1526895091361
+Content-Disposition: form-data; name=file
+
+filename=24775179_812457462275838_5027245078620327386_n.jpg
+------moxieboundary1526895091361-
+
+
+/// change stock
+https://ban.sendo.vn/Product/ChangeStock
+het hàng
+[{"Id":9827323,"VersionNo":"AAAAAeG8/TA=","ProductStock":false,"IsCabineted":false}]
+
+còn hàng
+
+[{"Id":9827323,"VersionNo":"AAAAAeIxchE=","ProductStock":true,"IsCabineted":false}]
+
+
+
+update product thêm id sp vào là dc;
+{"Id":9827323,"Name":"KhÄn táº¯m","StoreSku":"12321","Price":5000000,"HeightProduct":null,"WitdhProduct":null,"LengthProduct":null,"UnitId":"Single","Weight":490,"StockAvailability":true,"StockQuantity":3,"IsManageStock":true,"ProductStatus":2,"Description":"<p>Sáº£n pháº©m khÄn táº¯m<br data-mce-bogus=\"1\"></p>","DescriptionChange":false,"Cat2Id":999,"Cat3Id":1046,"Cat4Id":1047,"VersionNo":"AAAAAeIxfIw=","attributeCollections":[{"ID":888,"Name":"kÃ­ch thÆ°á»c","ControlType":"TextBox","attributeValues":[{"ID":-11282,"Value":"40x40","AttributeImg":null,"DisplayOrder":0,"IsDisplay":true,"IsSelected":true,"IsSuggestion":false,"IsOther":false,"__ko_mapping__":{"ignore":[],"include":["_destroy"],"copy":[],"observe":[],"mappedProperties":{"ID":true,"Value":true,"AttributeImg":true,"DisplayOrder":true,"IsSelected":true,"IsSuggestion":true},"copiedProperties":{}},"__moduleId__":"services/Shared/m.attributevalue"}],"DisplayOrder":1,"IsRequired":true},{"ID":333,"Name":"Xuáº¥t xá»©","ControlType":"ComboBox","attributeValues":[{"ID":24278,"Value":"England","AttributeImg":null,"DisplayOrder":0,"IsDisplay":true,"IsSelected":true,"IsSuggestion":false,"IsOther":false,"__ko_mapping__":{"ignore":[],"include":["_destroy"],"copy":[],"observe":[],"mappedProperties":{"ID":true,"Value":true,"AttributeImg":true,"DisplayOrder":true,"IsSelected":true,"IsSuggestion":true},"copiedProperties":{}},"__moduleId__":"services/Shared/m.attributevalue"}],"DisplayOrder":2,"IsRequired":true},{"ID":284,"Name":"MÃ u sáº¯c","ControlType":"CheckBox","attributeValues":[{"ID":603,"Value":"#ffff00","AttributeImg":null,"DisplayOrder":1,"IsDisplay":true,"IsSelected":true,"IsSuggestion":false,"IsOther":false,"__ko_mapping__":{"ignore":[],"include":["_destroy"],"copy":[],"observe":[],"mappedProperties":{"ID":true,"Value":true,"AttributeImg":true,"DisplayOrder":true,"IsSelected":true,"IsSuggestion":true},"copiedProperties":{}},"__moduleId__":"services/Shared/m.attributevalue"}],"DisplayOrder":3,"IsRequired":true}],"productPictures":[{"Id":37984018,"Name":"91741EngW6L._SX522_.jpg","SeoFileName":null,"PictureURL":"http://media3.scdn.vn/img2/2018/4_27/Yzh7CO.jpg","AlbumId":249200}],"ReasonComment":null,"ProductTags":"khan tam,khan tam ao tam,khan tam cao cap,khan tam giac,khan ao tam","OriginalPrice":5000000,"PictureId":37984018,"BrandId":0,"ProductRelateds":[],"VideoLinks":null,"SEOScore":6,"SEOKeyWord":"khÃÂn","SEOTitle":null,"SEODescription":null}
+
+delete product
+https://ban.sendo.vn/Product/DeleteProduct
+[9827323]
